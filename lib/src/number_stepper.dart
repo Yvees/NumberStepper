@@ -1,9 +1,9 @@
-library cart_stepper;
+library number_stepper;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class CartStepper<VM extends num> extends StatefulWidget {
+class NumberStepper<VM extends num> extends StatefulWidget {
   final VM _count;
   final VM _stepper;
   final double size;
@@ -19,7 +19,7 @@ class CartStepper<VM extends num> extends StatefulWidget {
   final Radius? radius;
   final Color? shadowColor;
 
-  const CartStepper({
+  const NumberStepper({
     Key? key,
     VM? count,
     VM? stepper,
@@ -39,10 +39,10 @@ class CartStepper<VM extends num> extends StatefulWidget {
         _stepper = (stepper ?? 1) as VM,
         super(key: key);
   @override
-  State<CartStepper<VM>> createState() => _CartStepperState<VM>();
+  State<NumberStepper<VM>> createState() => _NumberStepperState<VM>();
 }
 
-class _CartStepperState<VM extends num> extends State<CartStepper<VM>> {
+class _NumberStepperState<VM extends num> extends State<NumberStepper<VM>> {
   bool _editMode = false;
   String lastText = '';
   late TextEditingController _controller;
@@ -205,5 +205,5 @@ class _CartStepperState<VM extends num> extends State<CartStepper<VM>> {
   }
 }
 
-typedef CartStepperInt = CartStepper<int>;
-typedef CartStepperDouble = CartStepper<double>;
+typedef NumberStepperInt = NumberStepper<int>;
+typedef NumberStepperDouble = NumberStepper<double>;
