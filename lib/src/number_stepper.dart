@@ -35,7 +35,7 @@ class NumberStepper<VM extends num> extends StatefulWidget {
     this.shape,
     this.radius,
     this.shadowColor,
-  })  : _count = (count ?? 0) as VM,
+  })  : _count = (count ?? 0.0) as VM,
         _stepper = (stepper ?? 1) as VM,
         super(key: key);
   @override
